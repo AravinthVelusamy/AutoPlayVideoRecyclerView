@@ -26,15 +26,9 @@
     long consumerNode;
 }
 
--keep public class com.hoanganhtuan95ptit.autoplayvideorecyclerview.** {*; }
-
--keep, allowobfuscation class com.hoanganhtuan95ptit.autoplayvideorecyclerview.*
--keepclassmembers, allowobfuscation class * {
-    *;
-}
-
--keepnames class com.hoanganhtuan95ptit.autoplayvideorecyclerview.AutoPlayVideoRecyclerView
--keepclassmembernames class com.hoanganhtuan95ptit.autoplayvideorecyclerview.AutoPlayVideoRecyclerView{
-    public <methods>;
-    public <fields>;
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public *;
 }
